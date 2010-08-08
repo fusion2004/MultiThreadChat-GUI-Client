@@ -37,17 +37,18 @@ public class ChatClientGUI extends javax.swing.JFrame {
         sendButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Fusion2004's MiniChat Client");
+        setTitle("MultiThreadChat GUI Client");
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         chatConsole.setColumns(20);
         chatConsole.setEditable(false);
         chatConsole.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        chatConsole.setLineWrap(true);
         chatConsole.setRows(5);
         jScrollPane1.setViewportView(chatConsole);
 
-        sendText.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        sendText.setFont(new java.awt.Font("Monospaced", 0, 12));
         sendText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 sendTextKeyPressed(evt);

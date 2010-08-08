@@ -48,10 +48,11 @@ public class MultiThreadChatClient extends javax.swing.JFrame {
         chatConsole.setColumns(20);
         chatConsole.setEditable(false);
         chatConsole.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        chatConsole.setLineWrap(true);
         chatConsole.setRows(5);
         jScrollPane1.setViewportView(chatConsole);
 
-        sendText.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        sendText.setFont(new java.awt.Font("Monospaced", 0, 12));
         sendText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 sendTextKeyPressed(evt);
@@ -123,6 +124,7 @@ public class MultiThreadChatClient extends javax.swing.JFrame {
                             msgs = ThreadCommunicator.getAndClearReceivedMessages();
                             for(String s : msgs)
                                 chatConsole.append("\n"+s);
+                            chatConsole.setCaretPosition(chatConsole.getDocument().getLength());
                         }
                     }
                 }
@@ -139,6 +141,12 @@ public class MultiThreadChatClient extends javax.swing.JFrame {
                 networkConnection.start();
 
                 chatConsole.append("Welcome to the MultiThreadChat GUI client!");
+                String s;
+                s = JOptionPane.showInputDialog("Server:", "localhost");
+                ThreadCommunicator.setHost(s);
+                s = JOptionPane.showInputDialog("Port:", "7777");
+                ThreadCommunicator.setPort(Integer.parseInt(s));
+                
                 chatConsole.append("\nConnecting to "+ThreadCommunicator.getHost()+
                         ":"+ThreadCommunicator.getPort()+"...");
                 
