@@ -97,8 +97,10 @@ public class MultiThreadChatClient extends javax.swing.JFrame {
 
 
     private void sendButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        ThreadCommunicator.addSendMessage(sendText.getText());
-        sendText.setText("");
+        if( ! sendText.getText().equals("")) {
+            ThreadCommunicator.addSendMessage(sendText.getText());
+            sendText.setText("");
+        }
         sendText.grabFocus();
     }
 
