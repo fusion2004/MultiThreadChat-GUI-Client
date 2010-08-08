@@ -39,17 +39,18 @@ public class MultiThreadChatClient extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MultiThreadChat GUI Client");
+        setMinimumSize(new java.awt.Dimension(471, 349));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         chatConsole.setColumns(20);
         chatConsole.setEditable(false);
-        chatConsole.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        chatConsole.setFont(new java.awt.Font("Monospaced", 0, 12));
         chatConsole.setLineWrap(true);
         chatConsole.setRows(5);
         jScrollPane1.setViewportView(chatConsole);
 
-        sendText.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        sendText.setFont(new java.awt.Font("Monospaced", 0, 12));
         sendText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 sendTextKeyPressed(evt);
@@ -72,7 +73,6 @@ public class MultiThreadChatClient extends javax.swing.JFrame {
         helpMenu.setText("Help");
 
         aboutMenuItem.setText("About");
-        aboutMenuItem.setIconTextGap(0);
         helpMenu.add(aboutMenuItem);
 
         menuBar.add(helpMenu);
@@ -88,7 +88,7 @@ public class MultiThreadChatClient extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(sendText, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
+                        .addComponent(sendText, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(sendButton)))
                 .addContainerGap())
@@ -107,8 +107,7 @@ public class MultiThreadChatClient extends javax.swing.JFrame {
 
         pack();
     }
-
-
+    
     private void sendButtonActionPerformed(java.awt.event.ActionEvent evt) {
         if( ! sendText.getText().equals("")) {
             ThreadCommunicator.addSendMessage(sendText.getText());
