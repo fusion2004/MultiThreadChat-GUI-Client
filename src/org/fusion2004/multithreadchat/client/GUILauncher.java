@@ -1,10 +1,12 @@
-package org.fusion2004.multithreadchat.client.gui;
+package org.fusion2004.multithreadchat.client;
+
+import org.fusion2004.multithreadchat.client.gui.MultiThreadChatClient;
 
 /**
  *
  * @author fusion2004
  */
-public class Launcher {
+public class GUILauncher {
     public static void main(final String[] args) {
         System.setProperty("com.apple.mrj.application.apple.menu.about.name", "MultiThreadChat Client");
 

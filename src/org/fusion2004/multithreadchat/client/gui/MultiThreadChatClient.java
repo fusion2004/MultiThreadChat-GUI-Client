@@ -1,5 +1,9 @@
 package org.fusion2004.multithreadchat.client.gui;
 
+import org.fusion2004.multithreadchat.client.ThreadCommunicator;
+import org.fusion2004.multithreadchat.client.network.NetworkReceiveThread;
+import org.fusion2004.multithreadchat.client.network.NetworkConnectionThread;
+import org.fusion2004.multithreadchat.client.network.NetworkSendThread;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package org.fusion2004.multithreadchat.client.gui.enums;
+package org.fusion2004.multithreadchat.client.enums;
 
 /**
  *

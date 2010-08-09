@@ -3,9 +3,10 @@
  * and open the template in the editor.
  */
 
-package org.fusion2004.multithreadchat.client.gui;
+package org.fusion2004.multithreadchat.client.network;
 
 import java.io.IOException;
+import org.fusion2004.multithreadchat.client.ThreadCommunicator;
 
 /**
  *

@@ -1,6 +1,6 @@
-package org.fusion2004.multithreadchat.client.gui;
+package org.fusion2004.multithreadchat.client;
 
-import org.fusion2004.multithreadchat.client.gui.enums.*;
+import org.fusion2004.multithreadchat.client.enums.command;
 import java.io.*;
 import java.net.*;
 import java.util.*;

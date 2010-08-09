@@ -1,4 +1,4 @@
-package org.fusion2004.multithreadchat.client.gui;
+package org.fusion2004.multithreadchat.client.gui.temp;
 
 /*
  * To change this template, choose Tools | Templates
