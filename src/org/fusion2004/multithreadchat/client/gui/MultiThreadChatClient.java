@@ -114,7 +114,7 @@ public class MultiThreadChatClient extends javax.swing.JFrame {
             sendText.setText("");
         }
         //sendText.grabFocus();
-        sendText.requestFocusInWindow();
+        sendText.requestFocus();
     }
 
     private void sendTextKeyPressed(java.awt.event.KeyEvent evt) {
@@ -163,7 +163,8 @@ public class MultiThreadChatClient extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MultiThreadChatClient().setVisible(true);
+                MultiThreadChatClient fail = new MultiThreadChatClient();
+                fail.setVisible(true);
 
                 networkSend.start();
                 networkReceive.start();
@@ -180,7 +181,7 @@ public class MultiThreadChatClient extends javax.swing.JFrame {
                 chatConsole.append("\nConnecting to "+ThreadCommunicator.getHost()+
                         ":"+ThreadCommunicator.getPort()+"...");
 
-                sendText.requestFocusInWindow();
+                sendText.requestFocus();
 
                 ThreadCommunicator.connect();
             }
